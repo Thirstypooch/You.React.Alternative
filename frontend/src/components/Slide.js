@@ -33,6 +33,7 @@ const Slide = () => {
           className='d-block w-100'
           src={img3}
           alt='Third slide'
+          width={384} height={575.833} 
         />
       </Carousel.Item>
     </Carousel>

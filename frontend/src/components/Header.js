@@ -1,7 +1,9 @@
 import React from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap'
+import {  } from "gsap";
 
 const Header = () => {
+
   return (
     <header>
       <Navbar
@@ -30,5 +32,7 @@ const Header = () => {
     </header>
   )
 }
+
+
 
 export default Header
