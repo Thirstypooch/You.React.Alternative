@@ -1,9 +1,8 @@
 import React from 'react'
+import { LinkContainer } from 'react-router-bootstrap'
 import { Navbar, Nav, Container } from 'react-bootstrap'
-import {  } from "gsap";
 
 const Header = () => {
-
   return (
     <header>
       <Navbar
@@ -13,18 +12,24 @@ const Header = () => {
         style={{ background: '#DCC5D1' }}
       >
         <Container>
-          <Navbar.Brand href='/'>YOU Organic Skincare</Navbar.Brand>
+          <LinkContainer to='/'>
+            <Navbar.Brand>YOU Organic Skincare</Navbar.Brand>
+          </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ml-auto'>
-              <Nav.Link href='/cart'>
-                <i className='fas fa-shopping-cart '></i>
-                Carrito
-              </Nav.Link>
-              <Nav.Link href='/login'>
-                <i className='fas fa-user '></i>
-                Ingrese
-              </Nav.Link>
+              <LinkContainer to='/cart'>
+                <Nav.Link>
+                  <i className='fas fa-shopping-cart '></i>
+                  Carrito
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/login'>
+                <Nav.Link>
+                  <i className='fas fa-user '></i>
+                  Ingrese
+                </Nav.Link>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -32,7 +37,5 @@ const Header = () => {
     </header>
   )
 }
-
-
 
 export default Header
