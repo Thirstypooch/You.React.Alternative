@@ -1,15 +1,26 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 //import Slide from './components/Slide'
 import { Row, Col } from 'react-bootstrap'
 import Product from '../components/Product'
-import products from '../products'
 
+import axios from 'axios'
 import Carousel from 'react-bootstrap/Carousel'
 import img1 from '../img/img1.jpg'
 import img2 from '../img/img2.jpg'
 import img3 from '../img/img3.jpg'
 
 const HomeScreen = () => {
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    const fetchProducts = async() => {
+      const { data } = await axios.get('/api/products')
+
+      setProducts(data)
+    }
+
+    fetchProducts()
+  }, [])
   return (
     <>
     <Carousel>
