@@ -8,7 +8,7 @@ const products = [
     brand: 'YOU Organic SkinCare',
     category: '',
     price: 14000,
-    countInStock: 10,
+    countInStock: 0,
     rating: 4.5,
     numReviews: 12,
   },
