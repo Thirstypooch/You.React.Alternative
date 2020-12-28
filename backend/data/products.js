@@ -132,7 +132,7 @@ const products = [
   {
     _id: '11',
     name: 'Dream Pie',
-    image: '/images/.jpg',
+    image: '/images/img37.jpg',
     description:
       'Con ingredientes potentes escogidos especialmente para regenerar la piel y combatir el envejecimiento “ Dream Pie” es  una crema rica en vitaminas que mejora la circulación de la sangre mejorando notablemente el aspecto de la piel y previniedno la aparicios de arrugas.',
     brand: '',
