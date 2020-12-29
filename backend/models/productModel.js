@@ -39,19 +39,15 @@ const productSchema = mongoose.Schema({
   },
   ingredients: {
     type: String,
-    required: true
   },
   allIngredients: {
     type: String,
-    required: true
   },
   aroma: {
     type: String,
-    required: true
   },
   warning: {
     type: String,
-    required: true
   },
   reviews: [reviewSchema],
   rating: {
