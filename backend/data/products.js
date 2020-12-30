@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: '1',
     name: '1era. Línea Serum Antioxdiante ',
     image: '/images/img10.jpg',
     aspect:
@@ -25,7 +24,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '2',
     name: 'Gleam Óleo Facial',
     image: '/images/img9.jpg',
     aspect:
@@ -50,7 +48,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: '3',
     name: 'Hialuronic Serum',
     image: '/images/img11.jpg',
     aspect: 'Ideal para todo tipo de Piel, Vegano, Potente Hidratante, 30 ml',
@@ -73,7 +70,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '4',
     name: 'Bifásico Nutritivo',
     image: '/images/img13.jpg',
     aspect:
@@ -97,7 +93,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '5',
     name: 'Gel Limpiador Pepino',
     image: '/images/img12.jpg',
     aspect:
@@ -121,7 +116,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: '6',
     name: 'Luxury Rose Mask',
     image: '/images/img32.jpg',
     aspect:
@@ -144,7 +138,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '7',
     name: 'Super Food Mask',
     image: '/images/img33.jpg',
     aspect:
@@ -167,7 +160,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '8',
     name: 'Vita-C',
     image: '/images/img16.jpg',
     aspect: 'Todo tipo de Piel, Antioxidante - Antiaging, Hidratante, 30 g.',
@@ -189,7 +181,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '9',
     name: 'A-Klara',
     image: '/images/img18.jpg',
     aspect:
@@ -212,7 +203,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '10',
     name: 'Leche',
     image: '/images/img15.jpg',
     aspect: 'Todo tipo de Piel, Hidratante, 30 g.',
@@ -234,7 +224,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '11',
     name: 'Dream Pie',
     image: '/images/img37.jpg',
     aspect: 'Todo tipo de Piel, Regenerante -Hidratante, 30 g.',
@@ -256,7 +245,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '12',
     name: 'Ojos Si',
     image: '/images/img17.jpg',
     aspect: 'Todo tipo de Piel, Refrescante -Hidratante, 15 g.',
@@ -278,7 +266,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '13',
     name: 'Bloom Tónico',
     image: '/images/img20.jpg',
     aspect: 'Todo tipo de Piel, Tónico Humectante, 99 % Planta Orgánica, 100ml',
@@ -299,7 +286,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '14',
     name: 'Acqua Rose',
     image: '/images/img19.jpg',
     aspect:
@@ -322,7 +308,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '15',
     name: 'Absolute Lash',
     image: '/images/img14.jpg',
     aspect: 'Pestañas y Cejas, Fortalecedor, 10 ml.',
@@ -343,7 +328,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '16',
     name: 'Nutritiva Manos Maracuyá',
     image: '/images/img29.jpg',
     aspect: 'Nutrición para las Manos, Hidratante, 100 ml.',
@@ -364,7 +348,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '17',
     name: 'Nutritiva Manos Frutos del Bosque',
     image: '/images/img30.jpg',
     aspect: 'Nutrición para las Manos, Hidratante, 100 ml.',
@@ -385,7 +368,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '18',
     name: 'Flower Petals Body Lotion',
     image: '/images/img31.jpg',
     aspect: 'Nutrición Corporal, Hidratante, 250 ml.',
@@ -406,7 +388,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '19',
     name: 'Guasha',
     image: '/images/img36.jpg',
     aspect: 'Masaje Facial, Cuarzo Rosa',
@@ -422,7 +403,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '20',
     name: 'Rodillo Facial Cuarzo Rosado',
     image: '/images/img34.jpg',
     aspect: 'Masaje Facial Relajante',
@@ -438,7 +418,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '21',
     name: 'Rodillo Facial Verde Aventurina',
     image: '/images/img35.jpg',
     aspect: 'Masaje Facial Relajante',
@@ -454,7 +433,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '22',
     name: 'Pack Doble Limpieza',
     image: '/images/img25.jpg',
     aspect:
@@ -475,7 +453,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '23',
     name: 'Pack Rutina Día',
     image: '/images/img26.jpg',
     aspect:
@@ -496,7 +473,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '24',
     name: 'Pack Anti Manchas',
     image: '/images/img27.jpg',
     aspect:
