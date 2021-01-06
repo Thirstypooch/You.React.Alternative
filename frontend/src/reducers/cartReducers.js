@@ -1,6 +1,5 @@
 import {
   CART_ADD_ITEM,
-  CARD_REMOVE_ITEM,
   CART_REMOVE_ITEM,
 } from '../constants/cartConstants'
 
