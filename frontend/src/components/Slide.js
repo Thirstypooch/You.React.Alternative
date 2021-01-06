@@ -40,4 +40,4 @@ const Slide = () => {
   )
 }
  */
-export default Slide
+/*export default Slide*/

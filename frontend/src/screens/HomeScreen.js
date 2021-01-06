@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col } from 'react-bootstrap'
 import Product from '../components/Product'
+import Message from '../components/Message'
+import Loader from '../components/Loader'
 import { listProducts } from '../actions/productActions'
 
 import Carousel from 'react-bootstrap/Carousel'
@@ -51,9 +53,9 @@ const HomeScreen = () => {
 
       <h1 className='text-center py-3'>Últimos productos</h1>
       {loading ? (
-        <h2>Cargando...</h2>
+        <Loader />
       ) : error ? (
-        <h3>{error}</h3>
+        <Message variant='danger'>{error}</Message>
       ) : (
         <Row>
           {products.map((product) => (
