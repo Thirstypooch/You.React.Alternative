@@ -25,7 +25,7 @@ const ProductScreen = ({ history, match }) => {
 
   return (
     <>
-      <Link className='btn btn-light my-3' to='/'>
+      <Link className='btn btn-primary my-3' to='/' >
         Regresa
       </Link>
       {loading ? (
@@ -39,31 +39,31 @@ const ProductScreen = ({ history, match }) => {
           </Col>
           <Col md={3}>
             <ListGroup variant='flush'>
-              <ListGroup.Item>
+              <ListGroup.Item className="border-0">
                 <h2>{product.name}</h2>
               </ListGroup.Item>
-              <ListGroup.Item>
+              <ListGroup.Item className="border-0">
                 <h3>{product.aspect}</h3>
               </ListGroup.Item>
-              <ListGroup.Item>
+              <ListGroup.Item className="border-0">
                 <Rating
                   value={product.rating}
                   text={`${product.numReviews} reviews`}
                 />
               </ListGroup.Item>
-              <ListGroup.Item>${product.price}</ListGroup.Item>
-              <ListGroup.Item>{product.fit}</ListGroup.Item>
-              <ListGroup.Item>{product.use}</ListGroup.Item>
-              <ListGroup.Item>{product.ingredients}</ListGroup.Item>
-              <ListGroup.Item>{product.allIngredients}</ListGroup.Item>
-              <ListGroup.Item>{product.aroma}</ListGroup.Item>
-              <ListGroup.Item>{product.warning}</ListGroup.Item>
+              <ListGroup.Item className="border-0">${product.price}</ListGroup.Item>
+              <ListGroup.Item className="border-0">{product.fit}</ListGroup.Item>
+              <ListGroup.Item className="border-0">{product.use}</ListGroup.Item>
+              <ListGroup.Item className="border-0">{product.ingredients}</ListGroup.Item>
+              <ListGroup.Item className="border-0">{product.allIngredients}</ListGroup.Item>
+              <ListGroup.Item className="border-0">{product.aroma}</ListGroup.Item>
+              <ListGroup.Item className="border-0 mb-4">{product.warning}</ListGroup.Item>
             </ListGroup>
           </Col>
           <Col md={3}>
             <Card>
-              <ListGroup variant='flush'>
-                <ListGroup.Item>
+              <ListGroup variant='flush' className='py-3' >
+                <ListGroup.Item className="border-0">
                   <Row>
                     <Col>Precio:</Col>
                     <Col>
@@ -71,7 +71,7 @@ const ProductScreen = ({ history, match }) => {
                     </Col>
                   </Row>
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="border-0">
                   <Row>
                     <Col>Status:</Col>
                     <Col>
@@ -81,7 +81,7 @@ const ProductScreen = ({ history, match }) => {
                 </ListGroup.Item>
 
                 {product.countInStock > 0 && (
-                  <ListGroup.Item>
+                  <ListGroup.Item className="border-0">
                     <Row>
                       <Col>Qty</Col>
                       <Col>
