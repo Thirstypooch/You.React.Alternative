@@ -94,7 +94,7 @@ const RegisterScreen = ({ location, history }) => {
         <Col>
           Ya esta registrada ?{' '}
           <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}>
-            Login
+            Inicie sesión
           </Link>
         </Col>
       </Row>
