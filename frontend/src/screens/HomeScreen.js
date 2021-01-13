@@ -23,15 +23,23 @@ const HomeScreen = () => {
 
   return (
     <>
-      <Carousel>
-        <Carousel.Item>
-          <img className='d-block w-100' src={img1} alt='First slide' />
+      <Carousel indicators={false}>
+        <Carousel.Item interval={500}>
+          <img
+            className='d-block w-100 carouselPic'
+            src={img1}
+            alt='First slide'
+          />
           <Carousel.Caption>
             <h3>Creemos en el poder de lo natural </h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className='d-block w-100' src={img2} alt='Third slide' />
+          <img
+            className='d-block w-100 carouselPic'
+            src={img2}
+            alt='Second slide'
+          />
 
           <Carousel.Caption>
             <p>
@@ -40,13 +48,11 @@ const HomeScreen = () => {
             </p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item interval={500}>
           <img
-            className='d-block w-100'
+            className='d-block w-100 carouselPic'
             src={img3}
             alt='Third slide'
-/*             width={384}
-            height={575.833} */
           />
         </Carousel.Item>
       </Carousel>

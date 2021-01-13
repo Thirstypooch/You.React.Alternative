@@ -1,5 +1,5 @@
 html {
-  background-color: #FCF3E8;
+  background-color: #fcf3e8;
 }
 
 main {
@@ -28,3 +28,6 @@ h2 {
   margin: 0.1rem;
 }
 
+carouselPic {
+  max-width: 500px;
+}
