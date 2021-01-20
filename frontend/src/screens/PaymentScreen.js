@@ -38,6 +38,7 @@ const PaymentScreen = ({ history }) => {
               name='paymentMethod'
               value='Paypal'
               checked
+              inline
               onChange={(e) => setPaymentMethod(e.target.value)}
             ></Form.Check>
           </Col>
