@@ -41,7 +41,9 @@ const Header = () => {
                   <LinkContainer to='/profile'>
                     <NavDropdown.Item>Perfil</NavDropdown.Item>
                   </LinkContainer>
-                  <NavDropdown.Item onClick={logoutHandler}>Cerrar sesión</NavDropdown.Item>
+                  <NavDropdown.Item onClick={logoutHandler}>
+                    Cerrar sesión
+                  </NavDropdown.Item>
                 </NavDropdown>
               ) : (
                 <LinkContainer to='/login'>
@@ -50,6 +52,19 @@ const Header = () => {
                     Ingrese
                   </Nav.Link>
                 </LinkContainer>
+              )}
+              {userInfo && userInfo.isAdmin && (
+                <NavDropdown title='Admin' id='adminmenu'>
+                <LinkContainer to='/admin/userlist'>
+                  <NavDropdown.Item>Usuarios</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to='/admin/produclist'>
+                  <NavDropdown.Item>Productos</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to='/admin/orderlist'>
+                  <NavDropdown.Item>Órdenes</NavDropdown.Item>
+                </LinkContainer>           
+              </NavDropdown>
               )}
             </Nav>
           </Navbar.Collapse>
