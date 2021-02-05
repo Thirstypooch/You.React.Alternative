@@ -29,7 +29,6 @@ const productSchema = mongoose.Schema({
   },
   aspect: {
     type: String,
-    required: true
   },
   description: {
     type: String,
@@ -40,7 +39,6 @@ const productSchema = mongoose.Schema({
   },
   use: {
     type: String,
-    required: true
   },
   ingredients: {
     type: String,
@@ -67,13 +65,12 @@ const productSchema = mongoose.Schema({
   },
   price: {
     type: Number,
-    required: true,
-    default: 0
+    required: true
   },
   countInStock: {
     type: Number,
-    required: true,
-    default: 0
+    default: 0,
+    required: true
   }
 }, {
   timestamps: true
