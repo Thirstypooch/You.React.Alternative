@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
+import { Table, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from 'react-redux'
-import { Table, Button, Row, Col } from 'react-bootstrap'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
 import {
@@ -11,7 +11,7 @@ import {
 } from '../actions/productActions'
 import { PRODUCT_CREATE_RESET } from '../constants/productConstants'
 
-const ProductListScreen = ({ history, match}) => {
+const ProductListScreen = ({ history }) => {
   const dispatch = useDispatch()
 
   const productList = useSelector((state) => state.productList)
@@ -36,25 +36,25 @@ const ProductListScreen = ({ history, match}) => {
   const { userInfo } = userLogin
 
   useEffect(() => {
-    dispatch({ type: PRODUCT_CREATE_RESET })
+    dispatch({ type: PRODUCT_CREATE_RESET });
 
     if (!userInfo.isAdmin) {
-      history.push('/login')
+      history.push("/login");
     }
 
     if (successCreate) {
-      history.push(`/admin/product/${createdProduct._id}/edit`)
+      history.push(`/admin/product/${createdProduct._id}/edit`);
     } else {
-      dispatch(listProducts())
+      dispatch(listProducts());
     }
   }, [
     dispatch,
-    userInfo,
     history,
+    userInfo,
     successDelete,
     successCreate,
     createdProduct,
-  ])
+  ]);
 
   const deleteHandler = (id) => {
     if (window.confirm('Estas segura que deseas borrar este producto?')) {
