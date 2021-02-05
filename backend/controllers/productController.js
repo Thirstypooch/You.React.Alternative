@@ -5,7 +5,16 @@ import Product from '../models/productModel.js'
 // @route GET /api/products
 // @access Public
 const getProducts = asyncHandler(async (req, res) => {
-  const products = await Product.find({})
+  const keyword = req.query.keyword
+    ? {
+        name: {
+          $regex: req.query.keyword,
+          $options: 'i',
+        },
+      }
+    : {}
+
+  const products = await Product.find({ ...keyword })
   res.json(products)
 })
 
@@ -49,7 +58,7 @@ const createProduct = asyncHandler(async (req, res) => {
     image: '/images/sample.jpg',
     countInStock: 0,
     numReviews: 0,
-    description: 'Sample description'
+    description: 'Sample description',
   })
 
   const createdProduct = await product.save()
@@ -75,7 +84,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     res.json(updatedProduct)
   } else {
     res.status(404)
-    throw new Error('Product not found')   
+    throw new Error('Product not found')
   }
 })
 
@@ -88,7 +97,9 @@ const createProductReview = asyncHandler(async (req, res) => {
   const product = await Product.findById(req.params.id)
 
   if (product) {
-    const alreadyReviewed = product.reviews.find(r => r.user.toString() === req.user._id.toString())
+    const alreadyReviewed = product.reviews.find(
+      (r) => r.user.toString() === req.user._id.toString()
+    )
 
     if (alreadyReviewed) {
       res.status(400)
@@ -99,21 +110,30 @@ const createProductReview = asyncHandler(async (req, res) => {
       name: req.user.name,
       rating: Number(rating),
       comment,
-      user: req.user._id
+      user: req.user._id,
     }
 
     product.reviews.push(review)
 
     product.numReviews = product.reviews.length
 
-    product.rating = product.reviews.reduce((acc, item) => item.rating + acc, 0) / product.reviews.length
+    product.rating =
+      product.reviews.reduce((acc, item) => item.rating + acc, 0) /
+      product.reviews.length
 
     await product.save()
-    res.status(201).json({ message: 'Review added'})
+    res.status(201).json({ message: 'Review added' })
   } else {
     res.status(404)
-    throw new Error('Product not found')   
+    throw new Error('Product not found')
   }
 })
 
-export { getProducts, getProductById, deleteProduct, createProduct, updateProduct, createProductReview }
+export {
+  getProducts,
+  getProductById,
+  deleteProduct,
+  createProduct,
+  updateProduct,
+  createProductReview,
+}
